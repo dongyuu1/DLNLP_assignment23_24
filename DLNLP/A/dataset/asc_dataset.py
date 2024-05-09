@@ -1,5 +1,4 @@
 from torch.utils.data import Dataset
-from pytorch_pretrained_bert.tokenization import BertTokenizer
 from .preprocess import load_data
 from ..deberta.gpt2_tokenizer import GPT2Tokenizer
 import os
