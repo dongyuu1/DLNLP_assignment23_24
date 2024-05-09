@@ -19,7 +19,10 @@ def load_args():
         default="A",
         help="which task to perform. possible choices: A, B",
     )
-    parser.add_argument("--mode", type=str, default="train", help="train or test")
+
+    parser.add_argument("--lr", type=float, default=1e-5, help="learning rate")
+    parser.add_argument("--epsilon", type=float, default=1, help="intensity of adversarial attack")
+    parser.add_argument("--lambda_", type=float, default=10, help="weight of adversarial loss")
     args = parser.parse_args()
 
     return args
@@ -37,6 +40,9 @@ def load_config(args):
     assert args.task == "A" or args.task == "B"
     if args.task == "A":
         cfg = cfgs.get_cfg()
+        cfg.TRAIN.LR = args.lr
+        cfg.MODEL.EPSILON = args.epsilon
+        cfg.MODEL.LAMBDA = args.lambda_
     else:
         cfg = None
 
