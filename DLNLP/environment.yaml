@@ -1,4 +1,4 @@
-name: DLNLP1
+name: DLNLP
 channels:
   - pytorch
   - nvidia
@@ -129,4 +129,4 @@ dependencies:
       - yacs==0.1.8
       - zipp==3.18.1
 
-prefix: D:\anaconda3\envs\DLNLP1
+prefix: D:\anaconda3\envs\DLNLP
