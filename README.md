@@ -15,6 +15,7 @@ In folder A, asc_launch.py contains all the code for launching the model trainin
 cfgs.py stores all the hyperparameters and config information. ./dataset includes the code related to retrieving and preprocessing the data. 
 ./deberta contains the code of the model architecture, which is provided by https://github.com/huberemanuel/DeBERTa/. 
 ./utils includes some functional code to launch the deberta model https://github.com/huberemanuel/DeBERTa/.
+The dataset is sourced from https://github.com/IMPLabUniPr/BERT-for-ABSA.
 ## Initialization
 
 Please launch anaconda and create the environment with the following command:
